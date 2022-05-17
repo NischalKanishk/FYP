@@ -179,8 +179,17 @@
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Upload Syllabus</h6>
-                            <form method="post">
+                            <form action="{{ url_for('syllabusdata')}}" method="post">
                                 <div class="bg-light rounded h-100 p-4">
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" name="option" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected>Choose from different Syllabus</option>
+                                            <option value="Web Development">Web Development</option>
+                                            <option value="Python">Python</option>
+                                        </select>
+                                        <label for="floatingSelect">Select Subject</label>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Choose from file</label>
                                         <input class="form-control" type="file" name="syllabusfile" enctype=multipart/form-data id="formFile">
